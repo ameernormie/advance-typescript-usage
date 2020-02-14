@@ -1,0 +1,9 @@
+{
+  "name": "advance-typescript-usage",
+  "version": "1.0.0",
+  "description": "Typescript advance tips and tricks",
+  "main": "index.ts",
+  "repository": "git@github.com:ameernormie/advance-typescript-usage.git",
+  "author": "Ameer Hamza <ameernormie@gmail.com>",
+  "license": "MIT"
+}
