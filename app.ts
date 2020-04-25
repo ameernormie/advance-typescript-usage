@@ -1,24 +1,4 @@
-interface Person {
-  age: number;
-  name: string;
-  say(): string;
-}
-
-let mike = {
-  age: 22,
-  name: "Mike",
-  say: function () {
-    return (
-      "My name is " + this.name + " and I'm " + this.age + " years old! and"
-    );
-  },
-};
-
-function sayIt(person: Person) {
-  return person.say();
-}
-
-console.log(sayIt(mike));
+import * as Interfaces from "./interfaces";
 
 console.log(
   "********************Function Overloading (Type Guards)**********************"
@@ -40,3 +20,9 @@ function getTitles(bookProperty: any): string[] {
 
 console.log(getTitles("StringParam"));
 console.log(getTitles(true));
+
+console.log(
+  "\n\n********************Tuple and Union Types**********************"
+);
+
+let location: Interfaces.KeyValuePair<string, boolean> = ["ibiza", true];
