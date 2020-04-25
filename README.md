@@ -16,3 +16,31 @@
    - `tsc: watch - tsconfig.json`: TypeScript compiler watches for changes to your TypeScript files and runs the transpiler on each change.
 7. Making the TypeScript Build the default (VSCode): Select `Configure Default Build Task` from the global Terminal menu.
    - Now when you select the `Run Build Task` command or press (⇧⌘B), you are not prompted to select a task and your compilation starts.
+
+#### Type Guards
+
+```javascript
+interface Bird {
+  fly: () => void;
+  layEggs: () => void;
+}
+
+interface Fish {
+  swim: () => void;
+  layEggs: () => void;
+}
+
+/** Type Guard checks for type fish */
+function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined;
+}
+
+/** Type Guard checks for type fish */
+function isBird(pet: Fish | Bird): pet is Bird {
+  return (pet as Bird).fly !== undefined;
+}
+
+f (isBird(pet)) {
+  pet.fly();
+}
+```
