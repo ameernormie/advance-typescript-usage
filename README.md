@@ -44,3 +44,14 @@ f (isBird(pet)) {
   pet.fly();
 }
 ```
+
+###### Using `in` operator
+
+```javascript
+function move(pet: Fish | Bird) {
+  if ("swim" in pet) {
+    return pet.swim();
+  }
+  return pet.fly();
+}
+```

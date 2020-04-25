@@ -30,3 +30,10 @@ let pet = getSmallPet();
 if (isBird(pet)) {
   pet.fly();
 }
+
+function move(pet: Fish | Bird) {
+  if ("swim" in pet) {
+    return pet.swim();
+  }
+  return pet.fly();
+}
